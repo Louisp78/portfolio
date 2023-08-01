@@ -16,21 +16,21 @@ class AppFonts {
     fontFamily: 'NeueKonstantGrotesk',
     fontSize: 96,
     fontWeight: FontWeight.w400,
-    color: AppColors.of(context).textColor,
+    color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
   late TextStyle title = TextStyle(
     fontFamily: 'NeueKonstantGrotesk',
-    fontSize: 32,
+    fontSize: 60,
     fontWeight: FontWeight.w400,
-    color: AppColors.of(context).textColor,
+    color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
   late TextStyle body = TextStyle(
     fontFamily: 'Inter',
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: AppColors.of(context).textColor,
+    color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
 
@@ -38,14 +38,14 @@ class AppFonts {
     fontFamily: 'Inter',
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: AppColors.of(context).textColor,
+    color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
   late TextStyle label = TextStyle(
     fontFamily: 'Inter',
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: AppColors.of(context).textColor,
+    color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
 
@@ -54,20 +54,22 @@ class AppFonts {
 }
 
 class AppColors {
-  late final Color textColor;
+  late final Color oppositeBaseColor;
+  late final Color baseColor;
 
-  AppColors() : textColor = const Color(0x0ff00000);
+  AppColors() : oppositeBaseColor = const Color(0x0ff00000);
   AppColors.of(BuildContext context){
     final Brightness brightnessValue = MediaQuery.of(context).platformBrightness;
     bool isDark = brightnessValue == Brightness.dark;
-    textColor = isDark ? Colors.black : Colors.white;
+    oppositeBaseColor = isDark ? Colors.black : Colors.white;
+    baseColor = isDark ? Colors.white : Colors.black;
   }
 
-  static const Color primaryColor = Color(0xff9739D5);
-  static const Color secondaryColor = Color(0xff82BBEF);
-  static const Color backColor = Color(0xffFEFEFE);
-  static const Color subTextColor = Color(0xff505050);
-  static LabelColors labelColors = LabelColors();
+   Color primaryColor = Color(0xff9739D5);
+   Color secondaryColor = Color(0xff82BBEF);
+   Color backColor = Color(0xffFEFEFE);
+   Color subTextColor = Color(0xff505050);
+   LabelColors labelColors = LabelColors();
 }
 
 

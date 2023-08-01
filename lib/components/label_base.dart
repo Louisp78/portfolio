@@ -16,7 +16,7 @@ class LabelBase extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 29, vertical: 8),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.of(context).textColor, width: 4),
+          border: Border.all(color: AppColors.of(context).oppositeBaseColor, width: 4),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Text(

@@ -9,7 +9,7 @@ class CustomRowDivider extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Expanded(
         child: Divider(
-          color: AppColors.of(context).textColor,
+          color: AppColors.of(context).oppositeBaseColor,
           indent: size.width * 0.02,
           endIndent: size.width * 0.02,
         ));
