@@ -7,8 +7,15 @@ import 'package:portfolio/screens/about/about_screen.dart';
 import 'package:portfolio/themes.dart';
 
 import 'screens/cover/cover_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 

@@ -1,14 +1,20 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/base_button.dart';
 import 'package:portfolio/themes.dart';
 
 import 'contact_section.dart';
 
+import 'dart:html' as html;
+
+
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final storageRef = FirebaseStorage.instance.ref();
+    final cv = storageRef.child('cv.pdf').getDownloadURL();
     final Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(
@@ -35,7 +41,8 @@ class ProfileCard extends StatelessWidget {
                     Spacer(),
                     BaseButton(
                       title: "Voir mon CV",
-                      onPressed: () {
+                      onPressed: () async {
+                        downloadFile(await cv);
                       },
                     ),
                   ],
@@ -73,5 +80,9 @@ class ProfileCard extends StatelessWidget {
       ),
     );
   }
-
+  void downloadFile(String url) {
+    html.AnchorElement anchorElement =  new html.AnchorElement(href: url);
+    anchorElement.download = url;
+    anchorElement.click();
+  }
 }
