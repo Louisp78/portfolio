@@ -9,9 +9,12 @@ import 'package:portfolio/themes.dart';
 import 'screens/cover/cover_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 Future<void> main() async {
+
+  await dotenv.load(fileName: "lib/.env");
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
