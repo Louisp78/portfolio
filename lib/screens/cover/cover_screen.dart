@@ -48,25 +48,28 @@ class _CoverScreenState extends State<CoverScreen> {
                   // set height to min height of child content
                   SizedBox(
                     width: size.width,
-                    child: const Row(
+                    child: Row(
                       children: [
                         Spacer(
                           flex: 2,
                         ),
                         LabelBase(
                           title: "Développement mobile",
+                          onPress: (){},
                         ),
                         Spacer(
                           flex: 1,
                         ),
                         LabelBase(
                           title: "Développement backend",
+                          onPress: (){},
                         ),
                         Spacer(
                           flex: 1,
                         ),
                         LabelBase(
                           title: "Design d’application",
+                          onPress: (){},
                         ),
                         Spacer(
                           flex: 2,

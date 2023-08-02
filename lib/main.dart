@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Louis Place | Portfolio',
       theme: themeData,
       debugShowCheckedModeBanner: false,
-      home: const AboutScreen(),
+      home: const CoverScreen(),
     );
   }
 }

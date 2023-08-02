@@ -63,6 +63,7 @@ flutter:
   assets:
     - lib/assets/images/background_cover.png
     - lib/assets/images/background_cover.svg
+    - lib/assets/docs/CV.pdf
     - lib/assets/images/profile.png
     - lib/assets/images/lotus.png
 
