@@ -5,11 +5,13 @@ import 'package:portfolio/themes.dart';
 class BaseButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
+  final Color? color;
 
   const BaseButton({
     super.key,
     required this.onPressed,
     required this.title,
+    this.color,
   });
 
   @override
@@ -19,7 +21,7 @@ class BaseButton extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 29, vertical: 8),
         decoration: BoxDecoration(
-          color: AppColors.of(context).primaryColor,
+          color: color ?? AppColors.of(context).primaryColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Text(

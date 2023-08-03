@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'Louis Place | Portfolio',
       theme: themeData,
       debugShowCheckedModeBanner: false,
-      home: const ExperiencesScreen(),
+      home: const CoverScreen(),
     );
   }
 }

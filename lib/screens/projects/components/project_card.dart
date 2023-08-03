@@ -74,8 +74,10 @@ class ProjectCard extends StatelessWidget {
            Align(
              alignment: Alignment.centerLeft,
              child: SizedBox(
-               width: size.width * 0.4,
-                  child: Text(description, style: AppFonts.of(context).body)),
+               width: size.width * 0.6,
+                  height: size.height * 0.25,
+                  //! TODO: Fix the potential overflow
+                  child: SingleChildScrollView(child: Text(description, style: AppFonts.of(context).body))),
            ),
             Spacer(),
             Align(

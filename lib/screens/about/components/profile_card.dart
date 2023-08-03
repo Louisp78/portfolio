@@ -2,11 +2,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/base_button.dart';
 import 'package:portfolio/themes.dart';
+import 'package:portfolio/tools/send_email.dart';
 
 import 'contact_section.dart';
 
 import 'dart:html' as html;
-
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
@@ -70,8 +70,21 @@ class ProfileCard extends StatelessWidget {
                         ),
                         Spacer(),
                         Align(
-                            alignment: Alignment.bottomLeft,
-                            child: ContactSection()),
+                          alignment: Alignment.bottomLeft,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ContactSection(),
+                              BaseButton(
+                                onPressed: () =>
+                                    sendEmail(email: 'louis.place@epita.fr'),
+                                title: "Me contacter",
+                                color: AppColors.of(context).secondaryColor,
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -83,8 +96,9 @@ class ProfileCard extends StatelessWidget {
       ),
     );
   }
+
   void downloadFile(String url) {
-    html.AnchorElement anchorElement =  new html.AnchorElement(href: url);
+    html.AnchorElement anchorElement = new html.AnchorElement(href: url);
     anchorElement.download = url;
     anchorElement.click();
   }

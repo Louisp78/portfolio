@@ -34,13 +34,6 @@ class AboutScreen extends StatelessWidget {
           Spacer(
             flex: 2,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              LabelBase(title: 'Projects', onPress: () => Navigator.push(context, SlideDownPageRoute(page: ProjectScreen())),),
-              LabelBase(title: 'Experiences', onPress: () => Navigator.push(context, SlideDownPageRoute(page: ExperiencesScreen())),),
-            ],
-          ),
           Spacer(),
         ]),
       )),

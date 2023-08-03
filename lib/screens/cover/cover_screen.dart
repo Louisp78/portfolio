@@ -1,8 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/label_base.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
-import 'package:portfolio/navigation/slide_down_animation.dart';
 import 'package:portfolio/screens/about/about_screen.dart';
 import 'package:portfolio/themes.dart';
 
@@ -22,10 +20,6 @@ class _CoverScreenState extends State<CoverScreen> {
     return WheelNavigator(
     nextPage: AboutScreen(),
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.arrow_upward),
-        ),
         body: Stack(
           children: <Widget>[
             Align(
