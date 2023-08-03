@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
+import 'package:portfolio/screens/experiences/experiences_screen.dart';
 import 'package:portfolio/themes.dart';
 
 import 'components/project_card.dart';
@@ -28,6 +29,7 @@ class _ProjectScreenState extends State<ProjectScreen> {
         .of(context)
         .size;
     return WheelNavigator(
+      nextPage: ExperiencesScreen(),
       child: Scaffold(
         body: Column(
           children: [

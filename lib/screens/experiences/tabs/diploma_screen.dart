@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:portfolio/dto/diploma_dto.dart';
+import 'package:portfolio/screens/experiences/components/diploma_card.dart';
 import 'package:portfolio/themes.dart';
 
 class DiplomaScreen extends StatelessWidget {
@@ -26,34 +27,4 @@ class DiplomaScreen extends StatelessWidget {
   }
 }
 
-class DiplomaCard extends StatelessWidget {
 
-  final DiplomaDTO diploma;
-
-  const DiplomaCard({super.key,
-    required this.diploma,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-          padding: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: AppColors.of(context).baseColor,
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(diploma.date),
-              Text(diploma.title, style: AppFonts.of(context).body.copyWith(fontWeight: FontWeight.bold),),
-              SizedBox(height: 20),
-              Text(
-                diploma.description,
-                style: AppFonts.of(context).label,)
-            ],
-          ),
-        );
-  }
-}

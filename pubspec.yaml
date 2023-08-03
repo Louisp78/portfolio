@@ -68,6 +68,7 @@ flutter:
   assets:
     - lib/assets/images/
     - lib/assets/docs/
+    - lib/assets/data/
     - lib/.env
 
   # An image asset can refer to one or more resolution-specific "variants", see

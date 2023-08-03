@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/routes.dart';
 import 'package:portfolio/screens/about/about_screen.dart';
+import 'package:portfolio/screens/experiences/experiences_screen.dart';
 import 'package:portfolio/screens/projects/projects_screen.dart';
 import 'package:portfolio/themes.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'Louis Place | Portfolio',
       theme: themeData,
       debugShowCheckedModeBanner: false,
-      home: const AboutScreen(),
+      home: const ExperiencesScreen(),
     );
   }
 }
