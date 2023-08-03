@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/screens/about/components/contact_part.dart';
 import 'package:portfolio/tools/send_email.dart';
 import 'package:portfolio/tools/visit_url.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});

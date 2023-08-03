@@ -1,10 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:portfolio/dto/diploma_dto.dart';
 import 'package:portfolio/screens/experiences/components/diploma_card.dart';
-import 'package:portfolio/themes.dart';
 
 class DiplomaScreen extends StatelessWidget {
   final List<DiplomaDTO> diplomas;

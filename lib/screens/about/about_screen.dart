@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/label_base.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
-import 'package:portfolio/navigation/slide_down_animation.dart';
-import 'package:portfolio/screens/experiences/experiences_screen.dart';
 import 'package:portfolio/screens/projects/projects_screen.dart';
 import 'package:portfolio/themes.dart';
 import 'components/profile_card.dart';
