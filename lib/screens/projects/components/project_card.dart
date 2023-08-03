@@ -71,7 +71,12 @@ class ProjectCard extends StatelessWidget {
               ],
             ),
             SizedBox(height: size.height * 0.05),
-            Text(description, style: AppFonts.of(context).body),
+           Align(
+             alignment: Alignment.centerLeft,
+             child: SizedBox(
+               width: size.width * 0.4,
+                  child: Text(description, style: AppFonts.of(context).body)),
+           ),
             Spacer(),
             Align(
               alignment: Alignment.bottomCenter,
