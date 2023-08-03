@@ -21,5 +21,6 @@ doc/api/
 *.js.map
 
 **/.env
+**/config.properties
 
 !docs/**

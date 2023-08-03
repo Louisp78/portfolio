@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_config/flutter_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/routes.dart';
 import 'package:portfolio/screens/about/about_screen.dart';
@@ -15,7 +16,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 Future<void> main() async {
-
+  await FlutterConfig.loadEnvVariables();
   await dotenv.load(fileName: "lib/.env");
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
