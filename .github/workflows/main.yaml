@@ -41,7 +41,7 @@ jobs:
           echo "FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID" >> lib/assets/config.properties
 
       - name: Build web
-        run: flutter build web --release --web-renderer html --base-href /portfolio/ --output-dir=docs
+        run: flutter build web --release --base-href /portfolio/ --output-dir=docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
