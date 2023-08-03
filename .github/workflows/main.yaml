@@ -41,12 +41,12 @@ jobs:
       - name: Clean build
         run: flutter clean
 
-      - name: Run build runner
-        run:
-          flutter pub run build_runner build --delete-conflicting-outputs || flutter pub run build_runner build --delete-conflicting-outputs
-
       - name: Install dependencies
         run: flutter pub get
+
+      - name: Run build runner
+        run:
+          flutter pub run build_runner build --delete-conflicting-outputs
 
       - name: Build web
         run: flutter build web --release --base-href /portfolio/ --output-dir=docs
