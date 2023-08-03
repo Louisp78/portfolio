@@ -39,7 +39,6 @@ dependencies:
   firebase_core: ^2.15.0
   carousel_slider: ^4.2.1
   url_launcher: ^6.1.12
-  flutter_config: ^2.0.2
   envied: ^0.3.0+3
 
 dev_dependencies:
@@ -53,7 +52,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   build_runner: ^2.4.6
-  envify: ^2.0.2
   envied_generator: ^0.3.0+3
 
 # For information on the generic Dart part of this file, see the
