@@ -19,9 +19,6 @@ jobs:
           channel: 'stable'
           flutter-version: '3.10.6'
 
-      - name: Install dependencies
-        run: flutter pub get
-
       - name: Update environment variables
         env:  # Set the environment variable with the secret value
           FIREBASE_API: ${{ secrets.FIREBASE_API }}
@@ -41,9 +38,14 @@ jobs:
           echo "FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID" >> .env
           cat .env
 
+      - name: Clean build
+        run: flutter clean
+
       - name: Run build runner
         run: flutter pub run build_runner build --delete-conflicting-outputs
 
+      - name: Install dependencies
+        run: flutter pub get
 
       - name: Build web
         run: flutter build web --release --base-href /portfolio/ --output-dir=docs
