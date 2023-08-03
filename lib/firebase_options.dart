@@ -6,6 +6,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:portfolio/env/env.dart';
 import 'package:portfolio/environment.dart';
 
 
@@ -60,12 +61,12 @@ class DefaultFirebaseOptions {
   }
 
   static FirebaseOptions web = FirebaseOptions(
-    apiKey: Environment.apiKey,
-    appId: Environment.appId,
-    messagingSenderId: Environment.messagingSenderId,
-    projectId: Environment.projectId,
-    authDomain: Environment.authDomain,
-    storageBucket: Environment.storageBucket,
-    measurementId:  Environment.measurementId,
+    apiKey: Env.firebaseApi,
+    appId: Env.firebaseAppId,
+    messagingSenderId: Env.firebaseMessagingSenderId,
+    projectId: Env.firebaseProjectId,
+    authDomain: Env.firebaseAuthDomain,
+    storageBucket: Env.firebaseStorageBucket,
+    measurementId:  Env.firebaseMeasurementId,
   );
 }

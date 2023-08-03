@@ -1,17 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_config/flutter_config.dart';
-import 'package:portfolio/themes.dart';
-
-import 'screens/cover/cover_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+
+import 'package:portfolio/themes.dart';
+import 'screens/cover/cover_screen.dart';
 import 'firebase_options.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 Future<void> main() async {
-  await FlutterConfig.loadEnvVariables();
-  await dotenv.load(fileName: "lib/.env");
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

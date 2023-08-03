@@ -21,6 +21,7 @@ doc/api/
 *.js.map
 
 **/.env
+**/.env.g.dart
 **/config.properties
 
 !docs/**
