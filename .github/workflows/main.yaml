@@ -30,9 +30,6 @@ jobs:
           printf "FIREBASE_APP_ID=${{ secrets.FIREBASE_APP_ID }}\n" >> .env
           printf "FIREBASE_MEASUREMENT_ID=${{ secrets.FIREBASE_MEASUREMENT_ID }}\n" >> .env
 
-      - name: Clean build
-        run: flutter clean
-
       - name: Install dependencies
         run: flutter pub get
 
@@ -40,7 +37,7 @@ jobs:
         run: flutter pub run build_runner build --delete-conflicting-outputs
 
       - name: Build web
-        run: flutter build web --base-href /portfolio/
+        run: flutter build web --web-renderer canvaskit --base-href /portfolio/
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
