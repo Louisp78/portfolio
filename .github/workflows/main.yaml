@@ -29,13 +29,13 @@ jobs:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
           FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
         run:
-          printf "FIREBASE_API=$FIREBASE_API" > .env 
-          printf "FIREBASE_AUTH_DOMAIN=$FIREBASE_AUTH_DOMAIN" >> .env
-          printf "FIREBASE_PROJECT_ID=$FIREBASE_PROJECT_ID" >> .env
-          printf "FIREBASE_STORAGE_BUCKET=$FIREBASE_STORAGE_BUCKET" >> .env
-          printf "FIREBASE_MESSAGING_SENDER_ID=$FIREBASE_MESSAGING_SENDER_ID" >> .env
-          printf "FIREBASE_APP_ID=$FIREBASE_APP_ID" >> .env
-          printf "FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID" >> .env
+          printf "FIREBASE_API=$FIREBASE_API\n" > .env 
+          printf "FIREBASE_AUTH_DOMAIN=$FIREBASE_AUTH_DOMAIN\n" >> .env
+          printf "FIREBASE_PROJECT_ID=$FIREBASE_PROJECT_ID\n" >> .env
+          printf "FIREBASE_STORAGE_BUCKET=$FIREBASE_STORAGE_BUCKET\n" >> .env
+          printf "FIREBASE_MESSAGING_SENDER_ID=$FIREBASE_MESSAGING_SENDER_ID\n" >> .env
+          printf "FIREBASE_APP_ID=$FIREBASE_APP_ID\n" >> .env
+          printf "FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID\n" >> .env
 
       - name: Clean build
         run: flutter clean
