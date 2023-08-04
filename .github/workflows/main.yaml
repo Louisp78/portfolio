@@ -20,22 +20,14 @@ jobs:
           flutter-version: '3.10.6'
 
       - name: Update environment variables
-        env:  # Set the environment variable with the secret value
-          FIREBASE_API: ${{ secrets.FIREBASE_API }}
-          FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-          FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
-          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-          FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
-        run:
-          printf "FIREBASE_API=$FIREBASE_API\n" > .env 
-          printf "FIREBASE_AUTH_DOMAIN=$FIREBASE_AUTH_DOMAIN\n" >> .env
-          printf "FIREBASE_PROJECT_ID=$FIREBASE_PROJECT_ID\n" >> .env
-          printf "FIREBASE_STORAGE_BUCKET=$FIREBASE_STORAGE_BUCKET\n" >> .env
-          printf "FIREBASE_MESSAGING_SENDER_ID=$FIREBASE_MESSAGING_SENDER_ID\n" >> .env
-          printf "FIREBASE_APP_ID=$FIREBASE_APP_ID\n" >> .env
-          printf "FIREBASE_MEASUREMENT_ID=$FIREBASE_MEASUREMENT_ID\n" >> .env
+        run: |
+          printf "FIREBASE_API=${{ secrets.FIREBASE_API }}\n" > .env 
+          printf "FIREBASE_AUTH_DOMAIN=${{ secrets.FIREBASE_AUTH_DOMAIN }}\n" >> .env
+          printf "FIREBASE_PROJECT_ID=${{ secrets.FIREBASE_PROJECT_ID }}\n" >> .env
+          printf "FIREBASE_STORAGE_BUCKET=${{ secrets.FIREBASE_STORAGE_BUCKET }}\n" >> .env
+          printf "FIREBASE_MESSAGING_SENDER_ID=${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}\n" >> .env
+          printf "FIREBASE_APP_ID=${{ secrets.FIREBASE_APP_ID }}\n" >> .env
+          printf "FIREBASE_MEASUREMENT_ID=${{ secrets.FIREBASE_MEASUREMENT_ID }}\n" >> .env
 
       - name: Clean build
         run: flutter clean
@@ -44,8 +36,7 @@ jobs:
         run: flutter pub get
 
       - name: Run build runner
-        run:
-          flutter pub run build_runner build --delete-conflicting-outputs
+        run: flutter pub run build_runner build --delete-conflicting-outputs
 
       - name: Build web
         run: flutter build web --release --base-href /portfolio/ --output-dir=docs
