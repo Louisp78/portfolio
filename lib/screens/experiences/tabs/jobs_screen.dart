@@ -63,7 +63,7 @@ class JobCard extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-              Text("Expérience au cours de laquelle j'ai développé un outil à l'aide de Google App Script (Typescript) pour détecter les changements dans les annonces du marché immobilier et analyser les tendances des offres proposées ainsi que les résultats de l'entreprise, grâce à la base de données PostgresQL.", style: AppFonts.of(context).label,)
+              Text("Expérience au cours de laquelle j'ai développé un outil à l'aide de Google App Script (Typescript) pour détecter les changements dans les annonces du marché immobilier et analyser les tendances des offres proposées ainsi que les résultats de l'entreprise, grâce à la base de données PostgresQL.", style: AppFonts.of(context).label, overflow: TextOverflow.fade,)
             ],
           ));
   }

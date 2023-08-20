@@ -14,36 +14,36 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final Size size = MediaQuery.of(context).size;
-    return WheelNavigator(
-      nextPage: ProjectScreen(),
-      child: Scaffold(
-          body: Stack(
-            children: [
-              CustomBackground(
-              alignment: Alignment.topRight,
-              color: AppColors.of(context).secondaryVariantColor, lightWidth: 500, lightHeight: 500),
-              Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              SizedBox(
-                height: size.height * 0.05,
-              ),
-              Text(
-                'Qui suis-je ?',
-                style: AppFonts.of(context)
-                    .title
-                    .copyWith(color: AppColors.of(context).subTextColor),
-              ),
-              Spacer(),
-              ProfileCard(),
-              Spacer(
-                flex: 2,
-              ),
-              Spacer(),
-        ]),
-      ),
-            ],
-          )),
+    return Container(
+      width: size.width,
+      height: size.height,
+      child: Stack(
+              children: [
+                CustomBackground(
+                alignment: Alignment.topRight,
+                color: AppColors.of(context).secondaryVariantColor, lightWidth: 400, lightHeight: 400),
+                Padding(
+          padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                SizedBox(
+                  height: size.height * 0.05,
+                ),
+                Text(
+                  'Qui suis-je ?',
+                  style: AppFonts.of(context)
+                      .title
+                      .copyWith(color: AppColors.of(context).subTextColor),
+                ),
+                Spacer(),
+                ProfileCard(),
+                Spacer(
+                  flex: 2,
+                ),
+                Spacer(),
+          ]),
+        ),
+              ],
+            ),
     );
   }
 

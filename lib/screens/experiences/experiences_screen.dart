@@ -56,54 +56,56 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return WheelNavigator(
-        child: Scaffold(
-            backgroundColor: AppColors.of(context).backColor,
-            body: Stack(
+    return SizedBox(
+      width: size.width,
+      height: size.height,
+      child: Stack(
+        children: [
+          CustomBackground(
+              color: _currentTabIndex == 0
+                  ? AppColors.of(context).primaryColor
+                  : AppColors.of(context).secondaryColor,
+              lightWidth: 500,
+              lightHeight: 500,
+              alignment: Alignment.topRight),
+          Padding(
+            padding: EdgeInsets.all(size.width * 0.05),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomBackground(
-                    color: _currentTabIndex == 0 ? AppColors.of(context).primaryColor : AppColors.of(context).secondaryColor,
-                    lightWidth: 500,
-                    lightHeight: 500,
-                    alignment: Alignment.topRight),
-                Padding(
-                  padding: EdgeInsets.all(size.width * 0.05),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                TabSwitcher(
+                  tabController: _tabController,
+                  currentIndex: _currentTabIndex,
+                ),
+                Spacer(),
+                SizedBox(
+                  height: size.height * 0.7,
+                  child: TabBarView(
+                    controller: _tabController,
                     children: [
-                      TabSwitcher(
-                        tabController: _tabController,
-                        currentIndex: _currentTabIndex,
-                      ),
-                      Spacer(),
-                      SizedBox(
-                        height: size.height * 0.7,
-                        child: TabBarView(
-                          controller: _tabController,
-                          children: [
-                            JobsScreen(),
-                            FutureBuilder(
-                                future: loadData(),
-                                builder: (context, snapshot) {
-                                  if (snapshot.hasError) {
-                                    return Center(
-                                        child: Text(
-                                            'Erreur de chargement des données'));
-                                  } else if (snapshot.connectionState ==
-                                      ConnectionState.waiting) {
-                                    return Center(
-                                        child: CircularProgressIndicator());
-                                  } else {
-                                    return DiplomaScreen(diplomas: diplomas);
-                                  }
-                                }),
-                          ],
-                        ),
-                      ),
+                      JobsScreen(),
+                      FutureBuilder(
+                          future: loadData(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasError) {
+                              return Center(
+                                  child:
+                                      Text('Erreur de chargement des données'));
+                            } else if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return Center(child: CircularProgressIndicator());
+                            } else {
+                              return DiplomaScreen(diplomas: diplomas);
+                            }
+                          }),
                     ],
                   ),
                 ),
               ],
-            )));
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

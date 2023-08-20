@@ -76,8 +76,7 @@ class ProjectCard extends StatelessWidget {
              child: SizedBox(
                width: size.width * 0.6,
                   height: size.height * 0.25,
-                  //! TODO: Fix the potential overflow
-                  child: SingleChildScrollView(child: Text(description, style: AppFonts.of(context).body))),
+                  child: Text(description, style: AppFonts.of(context).body, overflow: TextOverflow.fade,)),
            ),
             Spacer(),
             Align(
