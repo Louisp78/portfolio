@@ -59,21 +59,18 @@ class _CoverScreenState extends State<CoverScreen> {
                           ),
                           LabelBase(
                             title: "Développement mobile",
-                            onPress: () {},
                           ),
                           Spacer(
                             flex: 1,
                           ),
                           LabelBase(
                             title: "Développement backend",
-                            onPress: () {},
                           ),
                           Spacer(
                             flex: 1,
                           ),
                           LabelBase(
                             title: "Design d’application",
-                            onPress: () {},
                           ),
                           Spacer(
                             flex: 2,
