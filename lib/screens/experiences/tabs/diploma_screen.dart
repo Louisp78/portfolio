@@ -11,7 +11,7 @@ class DiplomaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return GridView.builder(
-        itemCount: 4,
+        itemCount: diplomas.length,
         itemBuilder: (context, index) {
           return DiplomaCard(diploma: diplomas[index],);
         },

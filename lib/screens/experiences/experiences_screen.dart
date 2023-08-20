@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:portfolio/components/custom_background.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
 import 'package:portfolio/dto/diploma_dto.dart';
+import 'package:portfolio/dto/job_dto.dart';
 import 'package:portfolio/themes.dart';
 import 'components/tab_switcher.dart';
 import 'tabs/diploma_screen.dart';
@@ -23,12 +24,20 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
   int _currentTabIndex = 0;
 
   late List<DiplomaDTO> diplomas;
+  late List<JobDTO> jobs;
 
-  Future<void> loadData() async {
-    final String jsonString =
+  Future<void> loadJobData() async {
+    final String jobJsonString =
+    await rootBundle.loadString('lib/assets/data/job.json');
+    final List<dynamic> jobJsonData = json.decode(jobJsonString);
+    jobs = jobJsonData.map((data) => JobDTO.fromJson(data)).toList();
+  }
+
+  Future<void> loadDiplomaData() async {
+    final String diplomaJsonString =
         await rootBundle.loadString('lib/assets/data/diploma.json');
-    final List<dynamic> jsonData = json.decode(jsonString);
-    diplomas = jsonData.map((data) => DiplomaDTO.fromJson(data)).toList();
+    final List<dynamic> diplomaJsonData = json.decode(diplomaJsonString);
+    diplomas = diplomaJsonData.map((data) => DiplomaDTO.fromJson(data)).toList();
   }
 
   @override
@@ -36,7 +45,8 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
     _tabController = TabController(length: 2, vsync: this, initialIndex: 0);
     _tabController.addListener(() {
       handleTabChange();
-      loadData();
+      loadDiplomaData();
+      loadJobData();
     });
     super.initState();
   }
@@ -83,9 +93,22 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      JobsScreen(),
                       FutureBuilder(
-                          future: loadData(),
+                          future: loadJobData(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasError) {
+                              return Center(
+                                  child:
+                                      Text('Erreur de chargement des données'));
+                            } else if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return Center(child: CircularProgressIndicator());
+                            } else {
+                              return JobsScreen(jobs: jobs);
+                            }
+                          }),
+                      FutureBuilder(
+                          future: loadDiplomaData(),
                           builder: (context, snapshot) {
                             if (snapshot.hasError) {
                               return Center(
