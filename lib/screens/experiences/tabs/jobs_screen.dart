@@ -50,7 +50,7 @@ class JobCard extends StatelessWidget {
                     padding:
                     EdgeInsets.symmetric(horizontal: 15, vertical: 2),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: AppColors.of(context).secondaryVariantColor,
                       borderRadius: BorderRadius.all(Radius.circular(34)),
                     ),
                     child: Text(

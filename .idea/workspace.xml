@@ -10,7 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/assets/images/grain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/components/custom_background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/about/about_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/about_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cover/cover_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cover/cover_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/tabs/jobs_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/tabs/jobs_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/projects/projects_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/projects/projects_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/themes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/themes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +79,11 @@
       <recent name="C:\Users\place\Documents\portfolio\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\place\Documents\portfolio\lib\components" />
+      <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
       <recent name="C:\Users\place\Documents\portfolio\lib\env" />
       <recent name="C:\Users\place\Documents\portfolio\lib" />
       <recent name="C:\Users\place\Documents\portfolio" />
-      <recent name="C:\Users\place\Documents\portfolio\lib\assets" />
-      <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
     </key>
   </component>
   <component name="RunManager">

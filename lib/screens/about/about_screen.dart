@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/custom_background.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
 import 'package:portfolio/screens/projects/projects_screen.dart';
 import 'package:portfolio/themes.dart';
@@ -14,26 +17,33 @@ class AboutScreen extends StatelessWidget {
     return WheelNavigator(
       nextPage: ProjectScreen(),
       child: Scaffold(
-          body: Padding(
+          body: Stack(
+            children: [
+              CustomBackground(
+              alignment: Alignment.topRight,
+              color: AppColors.of(context).secondaryVariantColor, lightWidth: 500, lightHeight: 500),
+              Padding(
         padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          SizedBox(
-            height: size.height * 0.05,
-          ),
-          Text(
-            'Qui suis-je ?',
-            style: AppFonts.of(context)
-                .title
-                .copyWith(color: AppColors.of(context).subTextColor),
-          ),
-          Spacer(),
-          ProfileCard(),
-          Spacer(
-            flex: 2,
-          ),
-          Spacer(),
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+              Text(
+                'Qui suis-je ?',
+                style: AppFonts.of(context)
+                    .title
+                    .copyWith(color: AppColors.of(context).subTextColor),
+              ),
+              Spacer(),
+              ProfileCard(),
+              Spacer(
+                flex: 2,
+              ),
+              Spacer(),
         ]),
-      )),
+      ),
+            ],
+          )),
     );
   }
 
@@ -43,3 +53,40 @@ class AboutScreen extends StatelessWidget {
 
 
 
+
+class LeftLightBackground extends StatelessWidget {
+  const LeftLightBackground({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment.topRight,
+            child: ClipOval(
+              child: Container(
+                width: 400,
+                height: 400,
+                color: AppColors.of(context).secondaryVariantColor,
+              ),
+            ),
+          ),
+          Center(
+            child: ClipRect(
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
+                child: Container(
+                  width: size.width,
+                  height: size.height,
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

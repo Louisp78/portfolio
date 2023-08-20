@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/custom_background.dart';
 import 'package:portfolio/components/label_base.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
 import 'package:portfolio/screens/about/about_screen.dart';
@@ -12,16 +15,22 @@ class CoverScreen extends StatefulWidget {
   @override
   State<CoverScreen> createState() => _CoverScreenState();
 }
-class _CoverScreenState extends State<CoverScreen> {
 
+class _CoverScreenState extends State<CoverScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return WheelNavigator(
-    nextPage: AboutScreen(),
+      nextPage: AboutScreen(),
       child: Scaffold(
         body: Stack(
           children: <Widget>[
+            CustomBackground(
+              alignment: Alignment.center,
+              color: AppColors.of(context).secondaryVariantColor,
+              lightWidth: 400,
+              lightHeight: 400,
+            ),
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
@@ -50,21 +59,21 @@ class _CoverScreenState extends State<CoverScreen> {
                         ),
                         LabelBase(
                           title: "Développement mobile",
-                          onPress: (){},
+                          onPress: () {},
                         ),
                         Spacer(
                           flex: 1,
                         ),
                         LabelBase(
                           title: "Développement backend",
-                          onPress: (){},
+                          onPress: () {},
                         ),
                         Spacer(
                           flex: 1,
                         ),
                         LabelBase(
                           title: "Design d’application",
-                          onPress: (){},
+                          onPress: () {},
                         ),
                         Spacer(
                           flex: 2,
@@ -92,11 +101,10 @@ class _CoverScreenState extends State<CoverScreen> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
-

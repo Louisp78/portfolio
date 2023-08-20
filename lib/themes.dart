@@ -67,7 +67,7 @@ class AppColors {
 
    Color primaryColor = Color(0xff9739D5);
   Color secondaryColor = Color(0xff1E2068);
-   Color secondaryVariantColor = Color(0xff82BBEF);
+   Color secondaryVariantColor = Colors.blue;
    Color backColor = Color(0xffF6F6F6);
    Color subTextColor = Color(0xff505050);
    LabelColors labelColors = LabelColors();
