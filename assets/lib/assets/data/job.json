@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2023.05 - Present",
+    "title": "Spliit - Data analyst",
+    "type": "Stage",
+    "description": "Expérience au cours de laquelle j'ai développé un outil à l'aide de Google App Script (Typescript) pour détecter les changements dans les annonces du marché immobilier et analyser les tendances des offres proposées ainsi que les résultats de l'entreprise, grâce à la base de données PostgresQL."
+  },
+  {
+    "date": "2019.05 - 2021.04",
+    "title": "Protection Civile - Secouriste",
+    "type": "Bénévolat",
+    "description": "J'ai organisé plusieurs événements pour apporter de l'aide, tels que des balades à vélo, fournissant un soutien direct au domicile des personnes en remplacement des pompiers ou des services médicaux d'urgence (SAMU), et aidant dans des maisons de retraite pendant la pandémie de COVID."
+  }
+]
