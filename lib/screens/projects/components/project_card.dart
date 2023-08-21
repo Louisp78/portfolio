@@ -90,7 +90,8 @@ class ProjectCard extends StatelessWidget {
                       title: "Voir le code",
                       onPress: () =>
                           js.context.callMethod('open', [githubLink])),
-                  Spacer(),
+                  if (playLink != null)
+                    Spacer(),
                   if (playLink != null)
                     LabelBase(
                         title: "Jouer",
