@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/components/label_base.dart';
+import 'package:portfolio/responsive/responsive_config.dart';
+import 'package:portfolio/responsive/responsive_widget.dart';
+import 'package:portfolio/responsive/responsive_wrapper.dart';
 import 'package:portfolio/themes.dart';
+
+import 'desktop_project_card.dart';
 
 import 'dart:js' as js;
 
@@ -30,7 +35,7 @@ class ProjectCard extends StatelessWidget {
       for (var item in techImages ?? []) {
         svgPictures.add(SvgPicture.asset(
           item,
-          width: 60,
+          width: ResponsiveConfig.isProjectScreenWidthStep1(context) ? 40 : 60,
         ));
       }
       return svgPictures;
@@ -40,69 +45,71 @@ class ProjectCard extends StatelessWidget {
     return Card(
       elevation: 8,
       child: Container(
-        width: size.width * 0.7,
+        width: ResponsiveConfig.isProjectScreenWidthStep2(context) ? size.width * 0.8 : size.width * 0.7,
         height: size.height * 0.8,
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
         ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  image,
-                  width: 200,
-                ),
-                SizedBox(width: size.width * 0.05),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+        child: ResponsiveWrapper(
+          widgets: [
+            ResponsiveWidget(
+              minWidth: ResponsiveConfig.projectScreenWidthStep2,
+              widget: DesktopProjectCard(
+                title: title,
+                description: description,
+                image: image,
+                techImages: techImages,
+                githubLink: githubLink,
+                playLink: playLink,
+              ),
+            ),
+            ResponsiveWidget(
+                maxWidth: ResponsiveConfig.projectScreenWidthStep2,
+                widget: Column(
                   children: [
+                    Image.asset(
+                      image,
+                      width: 100,
+                    ),
+                    SizedBox(width: size.width * 0.05),
                     Text(
                       title,
                       style: AppFonts.of(context).title,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: generateSvgPicture(),
                     ),
-                  ],
-                )
-              ],
-            ),
-            SizedBox(height: size.height * 0.05),
-           Align(
-             alignment: Alignment.centerLeft,
-             child: SizedBox(
-               width: size.width * 0.6,
-                  height: size.height * 0.25,
-                  child: Text(description, style: AppFonts.of(context).body, overflow: TextOverflow.fade,)),
-           ),
-            Spacer(),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                children: [
-                  Spacer(
-                    flex: 3,
-                  ),
-                  LabelBase(
-                      title: "Voir le code",
-                      onPress: () =>
-                          js.context.callMethod('open', [githubLink])),
-                  if (playLink != null)
-                    Spacer(),
-                  if (playLink != null)
+                    SizedBox(height: size.height * 0.05),
+                    ResponsiveWrapper(
+                      widgets: [
+                        ResponsiveWidget(
+                          minHeight: ResponsiveConfig.projectScreenHeightStep1,
+                          widget:
+                           SizedBox(
+                          width: size.width * 0.6,
+                          height: size.height * 0.25,
+                          child: Text(
+                            description,
+                            style: AppFonts.of(context).body,
+                            overflow: TextOverflow.fade,
+                          ),),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
                     LabelBase(
-                        title: "Jouer",
-                        onPress: () =>
-                            js.context.callMethod('open', [playLink])),
-                  Spacer(
-                    flex: 3,
-                  ),
-                ],
-              ),
-            )
+                        title: "Voir le code",
+                        onPress: () => js.context.callMethod('open', [githubLink])),
+                    if (playLink != null) SizedBox(height: 20),
+                    if (playLink != null)
+                      LabelBase(
+                          title: "Jouer",
+                          onPress: () => js.context.callMethod('open', [playLink])),
+                  ],
+                )),
           ],
         ),
       ),

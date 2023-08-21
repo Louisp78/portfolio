@@ -17,6 +17,10 @@ class ResponsiveConfig {
   static const aboutScreenWidthStep3 = 376;
   static const aboutScreenHeightStep1 = 800;
   static const aboutScreenHeightStep2 = 600;
+  // Project Screen
+  static const projectScreenWidthStep1 = 1002;
+  static const projectScreenWidthStep2 = 620;
+  static const projectScreenHeightStep1 = 820;
   // ==================================
 
   static const smallMobileMaxWidth = 359;
@@ -52,4 +56,9 @@ class ResponsiveConfig {
       MediaQuery.of(context).size.height < aboutScreenHeightStep2;
   static bool isAboutScreenWidthStep3(BuildContext context) =>
       MediaQuery.of(context).size.width < aboutScreenWidthStep3;
+
+  static bool isProjectScreenWidthStep1(BuildContext context) =>
+      MediaQuery.of(context).size.width < projectScreenWidthStep1;
+static bool isProjectScreenWidthStep2(BuildContext context) =>
+      MediaQuery.of(context).size.width < projectScreenWidthStep2;
 }
