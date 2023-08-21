@@ -95,7 +95,7 @@ class _CoverScreenState extends State<CoverScreen> {
           ),
           // Row of containers
           Positioned(
-            bottom: 30,
+            bottom: size.height * 0.03,
             child: Column(
               children: [
                 // set height to min height of child content
