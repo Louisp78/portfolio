@@ -33,6 +33,6 @@ class ResponsiveWrapper extends StatelessWidget {
         return sortedWidgets[i].widget;
       }
     }
-    return sortedWidgets.last.widget;
+    return Container();
   }
 }

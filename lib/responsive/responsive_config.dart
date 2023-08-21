@@ -11,7 +11,12 @@ class ResponsiveConfig {
   static const coverScreenWidthStep2 = 340;
   static const coverScreenHeightStep1 = 900;
   static const coverScreenHeightStep2 = 700;
-
+  // About Screen
+  static const aboutScreenWidthStep1 = 1000;
+  static const aboutScreenWidthStep2 = 540;
+  static const aboutScreenWidthStep3 = 376;
+  static const aboutScreenHeightStep1 = 800;
+  static const aboutScreenHeightStep2 = 600;
   // ==================================
 
   static const smallMobileMaxWidth = 359;
@@ -36,4 +41,15 @@ class ResponsiveConfig {
       MediaQuery.of(context).size.height < coverScreenHeightStep1;
   static bool isCoverScreenWidthStep2(BuildContext context) =>
       MediaQuery.of(context).size.width < coverScreenWidthStep2;
+  static bool isAboutScreenWidthStep1(BuildContext context) =>
+      MediaQuery.of(context).size.width < aboutScreenWidthStep1;
+
+  static bool isAboutScreenWidthStep2(BuildContext context) =>
+      MediaQuery.of(context).size.width < aboutScreenWidthStep2;
+  static bool isAboutScreenHeightStep1(BuildContext context) =>
+      MediaQuery.of(context).size.height < aboutScreenHeightStep1;
+  static bool isAboutScreenHeightStep2(BuildContext context) =>
+      MediaQuery.of(context).size.height < aboutScreenHeightStep2;
+  static bool isAboutScreenWidthStep3(BuildContext context) =>
+      MediaQuery.of(context).size.width < aboutScreenWidthStep3;
 }

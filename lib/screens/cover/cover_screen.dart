@@ -73,20 +73,18 @@ class _CoverScreenState extends State<CoverScreen> {
             child: ResponsiveWrapper(
               widgets: [
                 ResponsiveWidget(
-                  maxWidth: ResponsiveConfig.coverScreenWidthStep2,
-                  maxHeight: ResponsiveConfig.coverScreenHeightStep2,
+                  maxWidth: ResponsiveConfig.coverScreenWidthStep1,
                     widget:
                     Image.asset("lib/assets/images/lotus.png", width: 90),
                 ),
                 ResponsiveWidget(
-                  maxWidth: ResponsiveConfig.coverScreenWidthStep1,
-                  maxHeight: ResponsiveConfig.coverScreenHeightStep1,
+                  maxWidth: ResponsiveConfig.mobilePortraitMaxWidth,
+                  minWidth: ResponsiveConfig.coverScreenWidthStep1,
                   widget:
                       Image.asset("lib/assets/images/lotus.png", width: 120),
                 ),
                 ResponsiveWidget(
                   minWidth: ResponsiveConfig.mobilePortraitMaxWidth,
-                  minHeight: ResponsiveConfig.coverScreenHeightStep1,
                   widget:
                       Image.asset("lib/assets/images/lotus.png", width: 175),
                 ),

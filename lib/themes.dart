@@ -25,13 +25,33 @@ class AppFonts {
   }
 
   double buttonSetSize() {
-    if (ResponsiveConfig.isCoverScreenWidthStep2(context))
-        return 12;
-    else if (ResponsiveConfig.isMobileWidth(context)) {
+    if (ResponsiveConfig.isCoverScreenWidthStep2(context)) {
+      return 12;
+    } else if (ResponsiveConfig.isMobileWidth(context)) {
       return 16;
     } else {
       return 20;
     }
+  }
+
+  double titleSetSize() {
+    if (ResponsiveConfig.isAboutScreenHeightStep2(context)){
+      return 30;
+    }
+    else if (ResponsiveConfig.isMobileWidth(context)){
+      return 40;
+    } else {
+      return 60;
+    }
+  }
+
+  double bodySetSize() {
+    if (ResponsiveConfig.isMobileWidth(context))
+      {
+        return 16;
+      } else {
+      return 20;
+      }
   }
 
 
@@ -44,14 +64,14 @@ class AppFonts {
   );
   late TextStyle title = TextStyle(
     fontFamily: 'NeueKonstantGrotesk',
-    fontSize: 60,
+    fontSize: titleSetSize(),
     fontWeight: FontWeight.w400,
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
   late TextStyle body = TextStyle(
     fontFamily: 'Inter',
-    fontSize: 20,
+    fontSize: bodySetSize(),
     fontWeight: FontWeight.w500,
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,

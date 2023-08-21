@@ -4,13 +4,17 @@ import 'package:portfolio/tools/send_email.dart';
 import 'package:portfolio/tools/visit_url.dart';
 
 class ContactSection extends StatelessWidget {
-  const ContactSection({super.key});
+  final bool isCentered;
+
+  const ContactSection({super.key,
+    this.isCentered = false,
+  });
 
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: isCentered ? CrossAxisAlignment.center :  CrossAxisAlignment.start,
       children: [
         ContactPart(name: 'Localisation :', value: 'Paris, France'),
         SizedBox(
