@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive/responsive_config.dart';
+import 'package:portfolio/responsive/responsive_wrapper.dart';
 @immutable
 class LabelColors {
   static const Color cdi = Color(0xffF7D698);
@@ -12,9 +14,30 @@ class AppFonts {
   final BuildContext context;
   AppFonts.of(this.context);
 
+  double bigTitleSetSize() {
+    if (ResponsiveConfig.isCoverScreenWidthStep2(context)) {
+      return 50;
+    } else if (ResponsiveConfig.isCoverScreenWidthStep1(context)) {
+      return 70;
+    } else {
+      return 96;
+    }
+  }
+
+  double buttonSetSize() {
+    if (ResponsiveConfig.isCoverScreenWidthStep2(context))
+        return 12;
+    else if (ResponsiveConfig.isMobileWidth(context)) {
+      return 16;
+    } else {
+      return 20;
+    }
+  }
+
+
   late TextStyle bigTitle = TextStyle(
     fontFamily: 'NeueKonstantGrotesk',
-    fontSize: 96,
+    fontSize: bigTitleSetSize(),
     fontWeight: FontWeight.w400,
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
@@ -36,18 +59,20 @@ class AppFonts {
 
   late TextStyle button = TextStyle(
     fontFamily: 'Inter',
-    fontSize: 20,
+    fontSize: buttonSetSize(),
     fontWeight: FontWeight.w600,
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
   late TextStyle label = TextStyle(
     fontFamily: 'Inter',
-    fontSize: 16,
+    fontSize: ResponsiveConfig.isMobileWidth(context) ? 12 : 16,
     fontWeight: FontWeight.w500,
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
+
+
 
 
 
