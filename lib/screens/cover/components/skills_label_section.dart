@@ -20,7 +20,7 @@ class SkillsLabelSection extends StatelessWidget {
             child: Column(
               children: [
                 LabelBase(
-                  title: "Développement mobile",
+                  title: "Développement mobile & web",
                 ),
                 SizedBox(
                   height: size.height * 0.02,
@@ -48,13 +48,13 @@ class SkillsLabelSection extends StatelessWidget {
                     flex: 2,
                   ),
                   LabelBase(
-                    title: "Développement mobile",
+                    title: "Développement mobile & web",
                   ),
                   Spacer(
                     flex: 1,
                   ),
                   LabelBase(
-                    title: "Développement backend",
+                    title: "Développement backoffice",
                   ),
                   Spacer(
                     flex: 1,

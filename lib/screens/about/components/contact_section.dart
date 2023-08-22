@@ -24,11 +24,6 @@ class ContactSection extends StatelessWidget {
         SizedBox(
           height: 5,
         ),
-
-        ContactPart(name: 'Téléphone :', value: '+33 6 95 40 78 16'),
-        SizedBox(
-          height: 5,
-        ),
         ContactPart(name: 'Github:', value: 'github.com/Louisp78', onTapValue: () =>visitUrl(url:'https://github.com/Louisp78'),
         ),
         SizedBox(
