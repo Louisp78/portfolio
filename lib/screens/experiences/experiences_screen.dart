@@ -6,6 +6,7 @@ import 'package:portfolio/components/custom_background.dart';
 import 'package:portfolio/components/wheel_navigator.dart';
 import 'package:portfolio/dto/diploma_dto.dart';
 import 'package:portfolio/dto/job_dto.dart';
+import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/themes.dart';
 import 'components/tab_switcher.dart';
 import 'tabs/diploma_screen.dart';
@@ -28,7 +29,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
 
   Future<void> loadJobData() async {
     final String jobJsonString =
-    await rootBundle.loadString('lib/assets/data/job.json');
+        await rootBundle.loadString('lib/assets/data/job.json');
     final List<dynamic> jobJsonData = json.decode(jobJsonString);
     jobs = jobJsonData.map((data) => JobDTO.fromJson(data)).toList();
   }
@@ -37,7 +38,8 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
     final String diplomaJsonString =
         await rootBundle.loadString('lib/assets/data/diploma.json');
     final List<dynamic> diplomaJsonData = json.decode(diplomaJsonString);
-    diplomas = diplomaJsonData.map((data) => DiplomaDTO.fromJson(data)).toList();
+    diplomas =
+        diplomaJsonData.map((data) => DiplomaDTO.fromJson(data)).toList();
   }
 
   @override
@@ -87,7 +89,11 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
                   tabController: _tabController,
                   currentIndex: _currentTabIndex,
                 ),
-                Spacer(),
+                if (!ResponsiveConfig.isMobileWidth(context)) Spacer(),
+                if (ResponsiveConfig.isMobileWidth(context))
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
                 SizedBox(
                   height: size.height * 0.7,
                   child: TabBarView(

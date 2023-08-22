@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/themes.dart';
 
 class TabSwitcher extends StatelessWidget {
@@ -26,7 +27,7 @@ class TabSwitcher extends StatelessWidget {
             _currentIndex == 0 ? Alignment.centerLeft : Alignment.centerRight,
         children: [
           Container(
-            width: 141,
+            width: ResponsiveConfig.isMobileWidth(context) ? 120 : 141,
             height: 34,
             padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 9),
             decoration: BoxDecoration(

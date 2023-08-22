@@ -21,6 +21,8 @@ class ResponsiveConfig {
   static const projectScreenWidthStep1 = 1002;
   static const projectScreenWidthStep2 = 620;
   static const projectScreenHeightStep1 = 820;
+  // Experience Screen
+  static const experienceScreenWidthStep1 = 1002;
   // ==================================
 
   static const smallMobileMaxWidth = 359;
@@ -61,4 +63,7 @@ class ResponsiveConfig {
       MediaQuery.of(context).size.width < projectScreenWidthStep1;
 static bool isProjectScreenWidthStep2(BuildContext context) =>
       MediaQuery.of(context).size.width < projectScreenWidthStep2;
+
+    static bool isExperienceScreenWidthStep1(BuildContext context) =>
+      MediaQuery.of(context).size.width < experienceScreenWidthStep1;
 }
