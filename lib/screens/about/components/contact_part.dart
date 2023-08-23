@@ -1,13 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/screens/about/components/contact_text.dart';
 import 'package:portfolio/themes.dart';
 
-class ContactPart extends StatelessWidget {
+class ContactButton extends StatefulWidget {
   final String name;
   final String value;
-  final Function()? onTapValue;
+  final void Function()? onTapValue;
 
-  const ContactPart({
+  const ContactButton({
     super.key,
     required this.name,
     required this.value,
@@ -15,18 +16,42 @@ class ContactPart extends StatelessWidget {
   });
 
   @override
+  State<ContactButton> createState() => _ContactButtonState();
+}
+
+class _ContactButtonState extends State<ContactButton> {
+
+  bool isHovered = false;
+
+  @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: "$name ",
-        style: AppFonts.of(context).label.copyWith(fontWeight: FontWeight.bold),
-        children: [
-          TextSpan(
-            text: value,
-            style: AppFonts.of(context).label,
-            recognizer: onTapValue != null ? (TapGestureRecognizer()..onTap = onTapValue) : null,
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          isHovered = true;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          isHovered = false;
+        });
+      },
+      child: InkWell(
+        onTap: widget.onTapValue,
+        child: AnimatedContainer(
+          decoration: BoxDecoration(
+            border: Border.all(color: AppColors.of(context).oppositeBaseColor, width: isHovered ? 0 : 2),
+            borderRadius: BorderRadius.circular(10),
+            color: isHovered ? AppColors.of(context).primaryColor : Colors.transparent,
           ),
-        ],
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          duration: Duration(milliseconds: 200),
+          child: ContactText(
+            name: widget.name,
+            value: widget.value,
+            isHovered: isHovered,
+          )
+        ),
       ),
     );
   }
