@@ -10,12 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/about/components/contact_text.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/assets/images/profile2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/contact_part.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/contact_part.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/contact_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/contact_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assets/data/job.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/data/job.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +69,8 @@
       <recent name="C:\Users\place\Documents\portfolio\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\place\Documents\portfolio\lib\components" />
       <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
+      <recent name="C:\Users\place\Documents\portfolio\lib\components" />
       <recent name="C:\Users\place\Documents\portfolio\lib\env" />
       <recent name="C:\Users\place\Documents\portfolio\lib" />
       <recent name="C:\Users\place\Documents\portfolio" />
