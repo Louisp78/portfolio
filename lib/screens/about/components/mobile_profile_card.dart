@@ -17,98 +17,95 @@ class MobileProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return Expanded(
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: ResponsiveConfig.isAboutScreenWidthStep3(context) ? 50 : 90,
-            backgroundImage: AssetImage('lib/assets/images/profile.png'),
-          ),
-          Text(
-            'Louis Place',
-            style: AppFonts.of(context).title,
-            textAlign: TextAlign.center,
-          ),
-          Spacer(),
-          ResponsiveWrapper(
-            widgets: [
-              ResponsiveWidget(
-                minHeight: ResponsiveConfig.aboutScreenHeightStep1,
-                widget: Column(
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: ResponsiveConfig.isUnderWidth(context, 445) ? 50 : 90,
+          backgroundImage: AssetImage('lib/assets/images/profile.png'),
+        ),
+        Text(
+          'Louis Place',
+          style: AppFonts.of(context).title,
+          textAlign: TextAlign.center,
+        ),
+        ResponsiveWrapper(
+          widgets: [
+            ResponsiveWidget(
+              minHeight: ResponsiveConfig.aboutScreenHeightStep1,
+              widget: Column(
+                children: [
+                  Text(
+                    LocalStrings.aboutMe,
+                    style: AppFonts.of(context).body,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        ResponsiveWrapper(
+          widgets: [
+            ResponsiveWidget(
+              minWidth: ResponsiveConfig.aboutScreenWidthStep2,
+              widget: Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
                   children: [
-                    Text(
-                      LocalStrings.aboutMe,
-                      style: AppFonts.of(context).body,
+                    Column(
+                      children: [
+                        BaseButton(
+                          title: "Voir mon CV",
+                          color: AppColors.of(context).secondaryColor,
+                          onPressed: () async {
+                            downloadFile(await cv);
+                          },
+                        ),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
+                        BaseButton(
+                          onPressed: () =>
+                              sendEmail(email: 'louis.place@epita.fr'),
+                          title: "Me contacter",
+                        ),
+                      ],
                     ),
+                    Spacer(),
+                    ContactSection(),
                   ],
                 ),
               ),
-            ],
-          ),
-          ResponsiveWrapper(
-            widgets: [
-              ResponsiveWidget(
-                minWidth: ResponsiveConfig.aboutScreenWidthStep2,
-                widget: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Row(
-                    children: [
-                      ContactSection(),
-                      Spacer(),
-                      Column(
-                        children: [
-                          BaseButton(
-                            title: "Voir mon CV",
-                            color: AppColors.of(context).secondaryColor,
-                            onPressed: () async {
-                              downloadFile(await cv);
-                            },
-                          ),
-                          SizedBox(
-                            height: size.height * 0.02,
-                          ),
-                          BaseButton(
-                            onPressed: () =>
-                                sendEmail(email: 'louis.place@epita.fr'),
-                            title: "Me contacter",
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              ResponsiveWidget(
-                  maxWidth: ResponsiveConfig.aboutScreenWidthStep2,
-                  widget: Column(
-                    children: [
-                      ContactSection(
-                        isCentered: true,
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      BaseButton(
-                        title: "Voir mon CV",
-                        onPressed: () async {
-                          downloadFile(await cv);
-                        },
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      BaseButton(
-                        onPressed: () =>
-                            sendEmail(email: 'louis.place@epita.fr'),
-                        title: "Me contacter",
-                        color: AppColors.of(context).secondaryColor,
-                      ),
-                    ],
-                  )),
-            ],
-          ),
-        ],
-      ),
+            ),
+            ResponsiveWidget(
+                maxWidth: ResponsiveConfig.aboutScreenWidthStep2,
+                widget: Column(
+                  children: [
+                    ContactSection(
+                      isCentered: true,
+                    ),
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                    BaseButton(
+                      title: "Voir mon CV",
+                      onPressed: () async {
+                        downloadFile(await cv);
+                      },
+                    ),
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                    BaseButton(
+                      onPressed: () =>
+                          sendEmail(email: 'louis.place@epita.fr'),
+                      title: "Me contacter",
+                      color: AppColors.of(context).secondaryColor,
+                    ),
+                  ],
+                )),
+          ],
+        ),
+      ],
     );
   }
 }

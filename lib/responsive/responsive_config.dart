@@ -31,6 +31,14 @@ class ResponsiveConfig {
   static const tabletPortraitMaxWidth = 1100;
   static const desktopPortraitMinWidth = 1100;
 
+  static bool isUnderWidth(BuildContext context, double width) =>
+      MediaQuery.of(context).size.width < width;
+  static bool isUnderHeight(BuildContext context, double height) =>
+      MediaQuery.of(context).size.height < height;
+  static bool isHighWidth(BuildContext context, double width) =>
+      MediaQuery.of(context).size.width > width;
+  static bool isHighHeight(BuildContext context, double height) =>
+      MediaQuery.of(context).size.height > height;
 
   static bool isMobileWidth(BuildContext context) =>
       MediaQuery.of(context).size.width < mobilePortraitMaxWidth;

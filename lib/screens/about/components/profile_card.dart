@@ -18,16 +18,6 @@ import 'dart:html' as html;
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
-  setCardHeight(BuildContext context) {
-    if (ResponsiveConfig.isAboutScreenWidthStep2(context)) {
-      return MediaQuery.of(context).size.height * 0.74;
-    } else if (ResponsiveConfig.isAboutScreenWidthStep1(context)) {
-      return MediaQuery.of(context).size.height * 0.8;
-    } else {
-      return MediaQuery.of(context).size.height * 0.6;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final storageRef = FirebaseStorage.instance.ref();
@@ -38,8 +28,6 @@ class ProfileCard extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
-        width: size.width * 0.9,
-        height: setCardHeight(context),
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
         ),
