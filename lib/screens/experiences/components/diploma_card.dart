@@ -19,7 +19,7 @@ class DiplomaCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: diploma.isCurrent ? Color(0xffD0D0D0) : AppColors.of(context).baseColor,
           border: diploma.isCurrent ? Border.all(color: Colors.black, width: 2) : null,
-          borderRadius: BorderRadius.circular(getDynamicBorderRadius(constraints, 5)),
+          borderRadius: BorderRadius.circular(10),
             boxShadow: [
               baseShadow,
             ],

@@ -29,7 +29,7 @@ class ProfileCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
           borderRadius:
-              BorderRadius.circular(getDynamicBorderRadius(constraints, baseBorderRadiusPercent)),
+              BorderRadius.circular(10),
           boxShadow: [
             baseShadow,
           ],

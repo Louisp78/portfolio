@@ -50,7 +50,7 @@ class ProjectCard extends StatelessWidget {
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
-          borderRadius: BorderRadius.circular(getDynamicBorderRadius(constraints, baseBorderRadiusPercent)),
+          borderRadius: BorderRadius.circular(10),
           boxShadow: [
             baseShadow,
           ],

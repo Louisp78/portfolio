@@ -24,7 +24,7 @@ class JobCard extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: AppColors.of(context).baseColor,
-            borderRadius:  BorderRadius.circular(getDynamicBorderRadius(constraints, baseBorderRadiusPercent)),
+            borderRadius:  BorderRadius.circular(10),
             boxShadow: [
               baseShadow,
             ],
