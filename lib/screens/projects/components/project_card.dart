@@ -43,7 +43,7 @@ class ProjectCard extends StatelessWidget {
 
     final Size size = MediaQuery.of(context).size;
     return Card(
-      elevation: 8,
+      elevation: 1,
       child: Container(
         width: ResponsiveConfig.isProjectScreenWidthStep2(context) ? size.width * 0.8 : size.width * 0.7,
         padding: EdgeInsets.symmetric(
