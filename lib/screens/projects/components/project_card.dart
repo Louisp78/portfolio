@@ -46,7 +46,6 @@ class ProjectCard extends StatelessWidget {
       elevation: 8,
       child: Container(
         width: ResponsiveConfig.isProjectScreenWidthStep2(context) ? size.width * 0.8 : size.width * 0.7,
-        height: size.height * 0.8,
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
         decoration: BoxDecoration(

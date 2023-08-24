@@ -18,10 +18,10 @@ class JobCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width * 0.35,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: AppColors.of(context).baseColor,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,7 @@ class JobCard extends StatelessWidget {
                             .body
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       JobTypeLabel(job: job),
                     ],
                   ),
@@ -63,7 +63,7 @@ class JobCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               job.description,
               style: AppFonts.of(context).label,

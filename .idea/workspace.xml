@@ -10,13 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/experiences/components/lotus_attribution.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/responsive/responsive_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/responsive/responsive_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/about_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/about_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/desktop_profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/desktop_profile_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/mobile_profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/mobile_profile_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

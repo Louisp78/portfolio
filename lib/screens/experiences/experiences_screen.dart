@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:portfolio/components/custom_background.dart';
-import 'package:portfolio/components/wheel_navigator.dart';
 import 'package:portfolio/dto/diploma_dto.dart';
 import 'package:portfolio/dto/job_dto.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
+import 'package:portfolio/screens/experiences/components/lotus_attribution.dart';
 import 'package:portfolio/themes.dart';
 import 'components/tab_switcher.dart';
 import 'tabs/diploma_screen.dart';
@@ -103,7 +103,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
                           future: loadJobData(),
                           builder: (context, snapshot) {
                             if (snapshot.hasError) {
-                              return Center(
+                              return const Center(
                                   child:
                                       Text('Erreur de chargement des données'));
                             } else if (snapshot.connectionState ==
@@ -117,12 +117,12 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
                           future: loadDiplomaData(),
                           builder: (context, snapshot) {
                             if (snapshot.hasError) {
-                              return Center(
+                              return const Center(
                                   child:
                                       Text('Erreur de chargement des données'));
                             } else if (snapshot.connectionState ==
                                 ConnectionState.waiting) {
-                              return Center(child: CircularProgressIndicator());
+                              return const Center(child: CircularProgressIndicator());
                             } else {
                               return DiplomaScreen(diplomas: diplomas);
                             }
@@ -133,6 +133,10 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
               ],
             ),
           ),
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: LotusAttribution(),
+          )
         ],
       ),
     );
