@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/web/google97d4ee1bcccf0bcb.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/components/diploma_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/components/diploma_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +67,8 @@
       <recent name="C:\Users\place\Documents\portfolio\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\place\Documents\portfolio\web\icons" />
       <recent name="C:\Users\place\Documents\portfolio\web" />
+      <recent name="C:\Users\place\Documents\portfolio\web\icons" />
       <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
       <recent name="C:\Users\place\Documents\portfolio\lib\components" />
       <recent name="C:\Users\place\Documents\portfolio\lib\env" />
