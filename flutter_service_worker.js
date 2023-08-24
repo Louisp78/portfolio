@@ -28,8 +28,8 @@ const RESOURCES = {"assets/lib/assets/fonts/NeueKonstantGrotesk-Book.otf": "6bc7
 "assets/FontManifest.json": "8fa1b641afbb9ab9413a9545b59ab72c",
 "assets/NOTICES": "02f5db701c53e2873483cffd4c6a52f3",
 "version.json": "009c9e65172e010890f7f65fde438006",
-"index.html": "4b5cda8b839e4adacb293c2493495b6b",
-"/": "4b5cda8b839e4adacb293c2493495b6b",
+"index.html": "743a8d26d562460fa0bc35c05edd7888",
+"/": "743a8d26d562460fa0bc35c05edd7888",
 "flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
 "icons/android-icon-192x192.png": "7c6386823ae4696f404a733edfa4efb2",
 "icons/apple-icon-114x114.png": "3e921ec1440eddd95f9536e83d63e900",
@@ -58,14 +58,15 @@ const RESOURCES = {"assets/lib/assets/fonts/NeueKonstantGrotesk-Book.otf": "6bc7
 "icons/apple-icon-60x60.png": "b6bab2ecafd0e501686e7ca7f1c8f59f",
 "icons/browserconfig.xml": "653d077300a12f09a69caeea7a8947f8",
 "icons/ms-icon-144x144.png": "6948469e0926890af8a74bb252e49881",
-"main.dart.js": "279ed374e5aac05a9ee454aa16577801",
+"main.dart.js": "a4c834a80e5727d6d0d42c7d365cc662",
 "canvaskit/canvaskit.wasm": "f48eaf57cada79163ec6dec7929486ea",
 "canvaskit/skwasm.wasm": "6711032e17bf49924b2b001cef0d3ea3",
 "canvaskit/canvaskit.js": "76f7d822f42397160c5dfc69cbc9b2de",
 "canvaskit/skwasm.worker.js": "19659053a277272607529ef87acf9d8a",
 "canvaskit/chromium/canvaskit.wasm": "fc18c3010856029414b70cae1afc5cd9",
 "canvaskit/chromium/canvaskit.js": "8c8392ce4a4364cbb240aa09b5652e05",
-"canvaskit/skwasm.js": "1df4d741f441fa1a4d10530ced463ef8"};
+"canvaskit/skwasm.js": "1df4d741f441fa1a4d10530ced463ef8",
+"google97d4ee1bcccf0bcb.html": "5a0cc6c1cd95c483b00f5a84706eb60e"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
