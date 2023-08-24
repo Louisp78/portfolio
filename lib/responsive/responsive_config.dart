@@ -9,7 +9,7 @@ class ResponsiveConfig {
   // Screen config ====================
   static const coverScreenWidthStep1 = 450;
   static const coverScreenWidthStep2 = 340;
-  static const coverScreenHeightStep1 = 900;
+  static const coverScreenHeightStep1 = 940;
   static const coverScreenHeightStep2 = 700;
   // About Screen
   static const aboutScreenWidthStep1 = 1000;
