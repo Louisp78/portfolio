@@ -105,9 +105,10 @@ class AppColors {
   AppColors() : oppositeBaseColor = const Color(0x0ff00000);
   AppColors.of(BuildContext context){
     final Brightness brightnessValue = MediaQuery.of(context).platformBrightness;
-    bool isDark = brightnessValue == Brightness.dark;
-    oppositeBaseColor = isDark ? Colors.black : Colors.white;
-    baseColor = isDark ? Colors.white : Colors.black;
+    // TODO: Add dark mode ?
+    //bool isDark = brightnessValue == Brightness.dark;
+    oppositeBaseColor = Colors.black;
+    baseColor = Colors.white;
   }
 
    Color primaryColor = Color(0xff9739D5);
