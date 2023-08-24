@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_wrapper.dart';
+
 @immutable
 class LabelColors {
   static const Color cdi = Color(0xffF7D698);
@@ -8,10 +9,9 @@ class LabelColors {
   static const Color volunteering = Color(0xffB1F0B4);
 }
 
-
 class AppFonts {
-
   final BuildContext context;
+
   AppFonts.of(this.context);
 
   double bigTitleSetSize() {
@@ -35,10 +35,9 @@ class AppFonts {
   }
 
   double titleSetSize() {
-    if (ResponsiveConfig.isAboutScreenHeightStep2(context)){
+    if (ResponsiveConfig.isAboutScreenHeightStep2(context)) {
       return 30;
-    }
-    else if (ResponsiveConfig.isMobileWidth(context)){
+    } else if (ResponsiveConfig.isMobileWidth(context)) {
       return 40;
     } else {
       return 60;
@@ -46,14 +45,12 @@ class AppFonts {
   }
 
   double bodySetSize() {
-    if (ResponsiveConfig.isMobileWidth(context))
-      {
-        return 16;
-      } else {
+    if (ResponsiveConfig.isMobileWidth(context)) {
+      return 16;
+    } else {
       return 20;
-      }
+    }
   }
-
 
   late TextStyle bigTitle = TextStyle(
     fontFamily: 'NeueKonstantGrotesk',
@@ -91,11 +88,6 @@ class AppFonts {
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
-
-
-
-
-
 }
 
 class AppColors {
@@ -103,23 +95,33 @@ class AppColors {
   late final Color baseColor;
 
   AppColors() : oppositeBaseColor = const Color(0x0ff00000);
-  AppColors.of(BuildContext context){
-    final Brightness brightnessValue = MediaQuery.of(context).platformBrightness;
+
+  AppColors.of(BuildContext context) {
+    final Brightness brightnessValue =
+        MediaQuery.of(context).platformBrightness;
     // TODO: Add dark mode ?
     //bool isDark = brightnessValue == Brightness.dark;
     oppositeBaseColor = Colors.black;
     baseColor = Colors.white;
   }
 
-   Color primaryColor = Color(0xff9739D5);
+  Color primaryColor = Color(0xff9739D5);
   Color secondaryColor = Color(0xff1E2068);
-   Color secondaryVariantColor = Colors.blue;
-   Color backColor = Color(0xffF6F6F6);
-   Color subTextColor = Color(0xff505050);
-   LabelColors labelColors = LabelColors();
+  Color secondaryVariantColor = Colors.blue;
+  Color backColor = Color(0xffF6F6F6);
+  Color subTextColor = Color(0xff505050);
+  LabelColors labelColors = LabelColors();
 }
 
-
 final ThemeData themeData = ThemeData(
-    fontFamily: 'Inter',
+  fontFamily: 'Inter',
 );
+
+const baseShadow = BoxShadow(
+  color: Colors.grey,
+  offset: Offset(0, 13), // Change the offset to adjust the shadow position
+  blurRadius: 34, // Adjust the blurRadius for the intensity of the shadow
+  spreadRadius: 0, // Adjust the spreadRadius for the size of the shadow
+);
+
+const baseBorderRadiusPercent = 1.3;

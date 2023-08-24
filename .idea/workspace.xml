@@ -10,42 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-36x36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/android-icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-60x60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-76x76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/favicon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/ms-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/ms-icon-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/ms-icon-310x310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/icons/ms-icon-70x70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/components/modal_with_dynamic_rounded_corners.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/profile_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/components/diploma_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/components/diploma_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/components/job_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/experiences_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/tabs/diploma_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/tabs/diploma_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/experiences/tabs/jobs_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/experiences/tabs/jobs_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/projects/components/project_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/projects/projects_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/projects/projects_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/themes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/themes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

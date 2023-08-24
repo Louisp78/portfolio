@@ -19,6 +19,7 @@ class DiplomaScreen extends StatelessWidget {
         ResponsiveWidget(
           minWidth: ResponsiveConfig.mobilePortraitMaxWidth,
           widget: GridView.builder(
+            clipBehavior: Clip.none,
               itemCount: diplomas.length,
               itemBuilder: (context, index) {
                 return DiplomaCard(
@@ -35,6 +36,7 @@ class DiplomaScreen extends StatelessWidget {
         ResponsiveWidget(
           maxWidth: ResponsiveConfig.mobilePortraitMaxWidth,
           widget: ListView.builder(
+            clipBehavior: Clip.none,
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.only(bottom: size.height * 0.02),

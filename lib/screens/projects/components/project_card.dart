@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/components/label_base.dart';
+import 'package:portfolio/components/modal_with_dynamic_rounded_corners.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_widget.dart';
 import 'package:portfolio/responsive/responsive_wrapper.dart';
@@ -42,14 +43,17 @@ class ProjectCard extends StatelessWidget {
     }
 
     final Size size = MediaQuery.of(context).size;
-    return Card(
-      elevation: 1,
-      child: Container(
+    return LayoutBuilder(
+      builder: (context, constraints) => Container(
         width: ResponsiveConfig.isProjectScreenWidthStep2(context) ? size.width * 0.8 : size.width * 0.7,
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
+          borderRadius: BorderRadius.circular(getDynamicBorderRadius(constraints, baseBorderRadiusPercent)),
+          boxShadow: [
+            baseShadow,
+          ],
         ),
         child: ResponsiveWrapper(
           widgets: [

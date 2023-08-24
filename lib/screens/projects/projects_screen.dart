@@ -70,6 +70,7 @@ class _ProjectScreenState extends State<ProjectScreen> {
                   onPageChanged: (index, reason) {
                     setState(() => _currentIndex = index);
                   },
+                  clipBehavior: Clip.none,
                 ),
                 carouselController: controller,
                 items: const [

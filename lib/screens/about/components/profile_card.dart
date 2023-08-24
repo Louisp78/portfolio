@@ -1,6 +1,7 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/base_button.dart';
+import 'package:portfolio/components/modal_with_dynamic_rounded_corners.dart';
 import 'package:portfolio/local_strings.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_widget.dart';
@@ -8,8 +9,6 @@ import 'package:portfolio/responsive/responsive_wrapper.dart';
 import 'package:portfolio/screens/about/components/desktop_profile_card.dart';
 import 'package:portfolio/screens/about/components/mobile_profile_card.dart';
 import 'package:portfolio/themes.dart';
-import 'package:portfolio/tools/download_file.dart';
-import 'package:portfolio/tools/send_email.dart';
 
 import 'contact_section.dart';
 
@@ -23,13 +22,17 @@ class ProfileCard extends StatelessWidget {
     final storageRef = FirebaseStorage.instance.ref();
     final cv = storageRef.child('cv.pdf').getDownloadURL();
     final Size size = MediaQuery.of(context).size;
-    return Card(
-      elevation: 8,
-      child: Container(
+    return LayoutBuilder(
+      builder: (context, constraints) => Container(
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.05, vertical: size.height * 0.05),
         decoration: BoxDecoration(
           color: AppColors.of(context).backColor,
+          borderRadius:
+              BorderRadius.circular(getDynamicBorderRadius(constraints, baseBorderRadiusPercent)),
+          boxShadow: [
+            baseShadow,
+          ],
         ),
         child: Column(
           children: [

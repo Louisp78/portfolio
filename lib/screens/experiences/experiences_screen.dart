@@ -97,6 +97,7 @@ class _ExperiencesScreenState extends State<ExperiencesScreen>
                 SizedBox(
                   height: size.height * 0.7,
                   child: TabBarView(
+                    clipBehavior: Clip.none,
                     controller: _tabController,
                     children: [
                       FutureBuilder(
