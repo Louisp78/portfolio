@@ -109,7 +109,6 @@ class _CoverScreenState extends State<CoverScreen> {
             child: Column(
               children: [
                 // set height to min height of child content
-                //SkillsLabelSection(),
                 SizedBox(
                   height: ResponsiveConfig.isCoverScreenHeightStep1(context)
                       ? size.height * 0.03
