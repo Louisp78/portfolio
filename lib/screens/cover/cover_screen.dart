@@ -6,7 +6,6 @@ import 'package:portfolio/responsive/responsive_wrapper.dart';
 import 'package:portfolio/themes.dart';
 
 import 'components/custom_divider.dart';
-import 'components/skills_label_section.dart';
 
 class CoverScreen extends StatefulWidget {
   const CoverScreen({super.key});
@@ -34,6 +33,7 @@ class _CoverScreenState extends State<CoverScreen> {
               color: AppColors.of(context).secondaryVariantColor,
               lightWidth: 200,
               lightHeight: 200,
+                 padding: EdgeInsets.only(top: size.height * 0.2),
             ),
               ),
               ResponsiveWidget(
@@ -45,6 +45,7 @@ class _CoverScreenState extends State<CoverScreen> {
               color: AppColors.of(context).secondaryVariantColor,
               lightWidth: 300,
               lightHeight: 300,
+                       padding: EdgeInsets.only(top: size.height * 0.2),
             ),
               ),
               ResponsiveWidget(
@@ -55,6 +56,7 @@ class _CoverScreenState extends State<CoverScreen> {
               color: AppColors.of(context).secondaryVariantColor,
               lightWidth: 400,
               lightHeight: 400,
+                    padding: EdgeInsets.only(top: size.height * 0.2),
             ),
               ),
             ],
@@ -63,32 +65,42 @@ class _CoverScreenState extends State<CoverScreen> {
             alignment: Alignment.topCenter,
             child: Padding(
               padding: EdgeInsets.only(top: size.height * 0.05),
-              child: Text(
-                'Portfolio',
-                style: AppFonts.of(context).bigTitle,
+              child: Column(
+                children: [
+                  Text(
+                    'Portfolio',
+                    style: AppFonts.of(context).bigTitle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Text('Freelance développeur web & mobile',
+                      style: AppFonts.of(context).subTitle, textAlign: TextAlign.center,),
+                ],
               ),
             ),
           ),
-          Center(
-            child: ResponsiveWrapper(
-              widgets: [
-                ResponsiveWidget(
-                  maxWidth: ResponsiveConfig.coverScreenWidthStep1,
+          Padding(
+            padding: EdgeInsets.only(top: size.height * 0.2),
+            child: Center(
+              child: ResponsiveWrapper(
+                widgets: [
+                  ResponsiveWidget(
+                    maxWidth: ResponsiveConfig.coverScreenWidthStep1,
+                      widget:
+                      Image.asset("lib/assets/images/lotus.png", width: 90),
+                  ),
+                  ResponsiveWidget(
+                    maxWidth: ResponsiveConfig.mobilePortraitMaxWidth,
+                    minWidth: ResponsiveConfig.coverScreenWidthStep1,
                     widget:
-                    Image.asset("lib/assets/images/lotus.png", width: 90),
-                ),
-                ResponsiveWidget(
-                  maxWidth: ResponsiveConfig.mobilePortraitMaxWidth,
-                  minWidth: ResponsiveConfig.coverScreenWidthStep1,
-                  widget:
-                      Image.asset("lib/assets/images/lotus.png", width: 120),
-                ),
-                ResponsiveWidget(
-                  minWidth: ResponsiveConfig.mobilePortraitMaxWidth,
-                  widget:
-                      Image.asset("lib/assets/images/lotus.png", width: 175),
-                ),
-              ],
+                        Image.asset("lib/assets/images/lotus.png", width: 120),
+                  ),
+                  ResponsiveWidget(
+                    minWidth: ResponsiveConfig.mobilePortraitMaxWidth,
+                    widget:
+                        Image.asset("lib/assets/images/lotus.png", width: 175),
+                  ),
+                ],
+              ),
             ),
           ),
           // Row of containers
@@ -97,7 +109,7 @@ class _CoverScreenState extends State<CoverScreen> {
             child: Column(
               children: [
                 // set height to min height of child content
-                SkillsLabelSection(),
+                //SkillsLabelSection(),
                 SizedBox(
                   height: ResponsiveConfig.isCoverScreenHeightStep1(context)
                       ? size.height * 0.03

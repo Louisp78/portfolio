@@ -1,11 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/components/label_base.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/themes.dart';
-
-import 'dart:js' as js;
+import 'package:portfolio/tools/visit_url.dart';
 
 class DesktopProjectCard extends StatelessWidget {
   final String title;
@@ -87,12 +85,12 @@ class DesktopProjectCard extends StatelessWidget {
               ),
               LabelBase(
                   title: "Voir le code",
-                  onPress: () => js.context.callMethod('open', [githubLink])),
+                  onPress: () => visitUrl(url: githubLink)),
               if (playLink != null) Spacer(),
               if (playLink != null)
                 LabelBase(
                     title: "Jouer",
-                    onPress: () => js.context.callMethod('open', [playLink])),
+                    onPress: () => visitUrl(url: playLink!)),
               Spacer(
                 flex: 3,
               ),

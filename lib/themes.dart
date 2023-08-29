@@ -23,6 +23,15 @@ class AppFonts {
       return 96;
     }
   }
+  double subTitleSetSize() {
+    if (ResponsiveConfig.isCoverScreenWidthStep2(context)) {
+      return 20;
+    } else if (ResponsiveConfig.isCoverScreenWidthStep1(context)) {
+      return 25;
+    } else {
+      return 35;
+    }
+  }
 
   double buttonSetSize() {
     if (ResponsiveConfig.isCoverScreenWidthStep2(context)) {
@@ -66,6 +75,14 @@ class AppFonts {
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
+
+  late TextStyle subTitle = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: subTitleSetSize(),
+    fontWeight: FontWeight.w600,
+    color: AppColors.of(context).subTextColor
+  );
+
   late TextStyle body = TextStyle(
     fontFamily: 'Inter',
     fontSize: bodySetSize(),
@@ -73,7 +90,6 @@ class AppFonts {
     color: AppColors.of(context).oppositeBaseColor,
     fontStyle: FontStyle.normal,
   );
-
   late TextStyle button = TextStyle(
     fontFamily: 'Inter',
     fontSize: buttonSetSize(),

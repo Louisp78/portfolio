@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/components/label_base.dart';
-import 'package:portfolio/components/modal_with_dynamic_rounded_corners.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_widget.dart';
 import 'package:portfolio/responsive/responsive_wrapper.dart';
 import 'package:portfolio/themes.dart';
+import 'package:portfolio/tools/visit_url.dart';
 
 import 'desktop_project_card.dart';
-
-import 'dart:js' as js;
 
 class ProjectCard extends StatelessWidget {
   final String title;
@@ -105,12 +103,12 @@ class ProjectCard extends StatelessWidget {
                     SizedBox(height: 20),
                     LabelBase(
                         title: "Voir le code",
-                        onPress: () => js.context.callMethod('open', [githubLink])),
+                        onPress: () => visitUrl(url: githubLink)),
                     if (playLink != null) SizedBox(height: 20),
                     if (playLink != null)
                       LabelBase(
                           title: "Jouer",
-                          onPress: () => js.context.callMethod('open', [playLink])),
+                          onPress: () => visitUrl(url: playLink!)),
                   ],
                 )),
           ],

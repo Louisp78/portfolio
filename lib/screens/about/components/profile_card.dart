@@ -1,18 +1,11 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/base_button.dart';
-import 'package:portfolio/components/modal_with_dynamic_rounded_corners.dart';
-import 'package:portfolio/local_strings.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_widget.dart';
 import 'package:portfolio/responsive/responsive_wrapper.dart';
 import 'package:portfolio/screens/about/components/desktop_profile_card.dart';
 import 'package:portfolio/screens/about/components/mobile_profile_card.dart';
 import 'package:portfolio/themes.dart';
-
-import 'contact_section.dart';
-
-import 'dart:html' as html;
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
