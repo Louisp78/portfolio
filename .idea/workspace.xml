@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c3f3ad90-1211-4f2b-a42b-28b55bb57171" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cover/cover_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cover/cover_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assets/images/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assets/images/profile2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/images/profile2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_constant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/desktop_profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/desktop_profile_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/about/components/mobile_profile_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/about/components/mobile_profile_card.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,32 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/place/Documents/portfolio/docs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "C:/Users/place/Documents/portfolio/docs",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.scopes",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\place\Documents\portfolio\docs" />
       <recent name="C:\Users\place\Documents\portfolio\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
       <recent name="C:\Users\place\Documents\portfolio\web" />
       <recent name="C:\Users\place\Documents\portfolio\web\icons" />
-      <recent name="C:\Users\place\Documents\portfolio\lib\assets\images" />
       <recent name="C:\Users\place\Documents\portfolio\lib\components" />
       <recent name="C:\Users\place\Documents\portfolio\lib\env" />
     </key>

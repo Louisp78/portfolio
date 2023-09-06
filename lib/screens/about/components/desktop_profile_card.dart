@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/base_button.dart';
-import 'package:portfolio/local_strings.dart';
+import 'package:portfolio/local_constant.dart';
 import 'package:portfolio/screens/about/components/contact_section.dart';
 import 'package:portfolio/themes.dart';
 import 'package:portfolio/tools/download_file.dart';
@@ -25,7 +25,7 @@ class DesktopProfileCard extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 90,
-              backgroundImage: AssetImage('lib/assets/images/profile.png'),
+              backgroundImage: AssetImage(LocalConstant.profileImgPath),
             ),
             //Spacer(),
             SizedBox(
@@ -59,7 +59,7 @@ class DesktopProfileCard extends StatelessWidget {
                 style: AppFonts.of(context).title,
               ),
               Text(
-                LocalStrings.aboutMe,
+                LocalConstant.aboutMe,
                 style: AppFonts.of(context).body,
               ),
               //Spacer(),

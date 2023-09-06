@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/base_button.dart';
-import 'package:portfolio/local_strings.dart';
+import 'package:portfolio/local_constant.dart';
 import 'package:portfolio/responsive/responsive_config.dart';
 import 'package:portfolio/responsive/responsive_widget.dart';
 import 'package:portfolio/responsive/responsive_wrapper.dart';
@@ -21,7 +21,7 @@ class MobileProfileCard extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: ResponsiveConfig.isUnderWidth(context, 445) ? 50 : 90,
-          backgroundImage: AssetImage('lib/assets/images/profile.png'),
+          backgroundImage: const AssetImage(LocalConstant.profileImgPath),
         ),
         Text(
           'Louis Place',
@@ -35,7 +35,7 @@ class MobileProfileCard extends StatelessWidget {
               widget: Column(
                 children: [
                   Text(
-                    LocalStrings.aboutMe,
+                    LocalConstant.aboutMe,
                     style: AppFonts.of(context).body,
                   ),
                 ],
@@ -96,8 +96,7 @@ class MobileProfileCard extends StatelessWidget {
                       height: size.height * 0.02,
                     ),
                     BaseButton(
-                      onPressed: () =>
-                          sendEmail(email: 'louis.place@epita.fr'),
+                      onPressed: () => sendEmail(email: 'louis.place@epita.fr'),
                       title: "Me contacter",
                       color: AppColors.of(context).secondaryColor,
                     ),
