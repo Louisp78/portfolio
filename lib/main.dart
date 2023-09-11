@@ -44,29 +44,17 @@ class _MyAppState extends State<MyApp> {
       title: 'Louis Place | Portfolio',
       theme: themeData,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: CarouselSlider(
-          carouselController: controller,
-         options: CarouselOptions(
-            height: MediaQuery.of(context).size.height,
-            viewportFraction: 1,
-            enableInfiniteScroll: false,
-            autoPlay: false,
-            scrollDirection: Axis.vertical,
-            autoPlayInterval: Duration(seconds: 3),
-            onPageChanged: (index, reason) {
-              setState(() {
-                _currentIndex = index;
-              });
-            },
-         ),
-         items: [
+      home:  Scaffold(
+        body: ListView(
+          shrinkWrap: true,
+          children: [
             CoverScreen(),
             AboutScreen(),
             ProjectScreen(),
             ExperiencesScreen(),
           ],
-        )
+        ),
+
       )
     );
   }
