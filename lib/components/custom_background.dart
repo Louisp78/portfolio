@@ -43,7 +43,6 @@ class CustomBackground extends StatelessWidget {
             padding: padding ?? EdgeInsets.zero,
             child: Center(
               child: ClipRect(
-                clipBehavior: Clip.none,
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
                   child: Container(
